@@ -1,0 +1,24 @@
+# robots.txt for 3d-lazer.moscow
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexAI
+Allow: /
+
+# Sitemap
+Sitemap: https://3d-lazer.moscow/sitemap.xml

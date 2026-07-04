@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "category": "laser",
+    "title": "Гравировка на ноже",
+    "image": "https://comp.moscow/images/gallery-engrave.jpg",
+    "description": "Подарочная гравировка на складном ноже"
+  },
+  {
+    "id": 2,
+    "category": "print3d",
+    "title": "Печатная скульптура",
+    "image": "https://comp.moscow/images/gallery-3d.jpg",
+    "description": "Кастомная 3D-модель по эскизу"
+  },
+  {
+    "id": 3,
+    "category": "laser",
+    "title": "Маркировка стали",
+    "image": "https://comp.moscow/images/service-laser.jpg",
+    "description": "Промышленная маркировка на металле"
+  },
+  {
+    "id": 4,
+    "category": "print3d",
+    "title": "Прототип детали",
+    "image": "https://comp.moscow/images/service-3d.jpg",
+    "description": "Функциональный прототип из PLA"
+  }
+]

@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="trace1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="trace2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0.04"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#00d4ff;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#111320"/>
+
+  <!-- === CIRCUIT TRACES === -->
+  <!-- Top-left cluster -->
+  <g stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.2">
+    <path d="M0,200 L200,200 L250,250 L250,400"/>
+    <path d="M0,220 L180,220 L230,270 L230,380"/>
+    <path d="M0,240 L160,240 L210,290 L210,360"/>
+    <path d="M250,250 L400,250 L450,300"/>
+    <path d="M230,270 L380,270 L430,320"/>
+    <path d="M210,290 L360,290 L410,340"/>
+    <path d="M250,400 L250,500 L300,550"/>
+    <path d="M230,380 L230,480 L280,530"/>
+  </g>
+
+  <!-- Top-right cluster -->
+  <g stroke="#ff6b35" stroke-width="1.5" fill="none" opacity="0.18">
+    <path d="M1920,150 L1700,150 L1650,200 L1650,350"/>
+    <path d="M1920,170 L1720,170 L1670,220 L1670,330"/>
+    <path d="M1920,190 L1740,190 L1690,240 L1690,310"/>
+    <path d="M1650,200 L1500,200 L1450,250"/>
+    <path d="M1670,220 L1520,220 L1470,270"/>
+    <path d="M1690,240 L1540,240 L1490,290"/>
+    <path d="M1650,350 L1650,450 L1600,500"/>
+    <path d="M1670,330 L1670,430 L1620,480"/>
+  </g>
+
+  <!-- Bottom-left cluster -->
+  <g stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.16">
+    <path d="M0,800 L300,800 L350,750 L350,600"/>
+    <path d="M0,820 L280,820 L330,770 L330,620"/>
+    <path d="M0,840 L260,840 L310,790 L310,640"/>
+    <path d="M350,750 L500,750 L550,700"/>
+    <path d="M330,770 L480,770 L530,720"/>
+    <path d="M310,790 L460,790 L510,740"/>
+    <path d="M350,600 L350,500 L400,450"/>
+    <path d="M330,620 L330,520 L380,470"/>
+  </g>
+
+  <!-- Bottom-right cluster -->
+  <g stroke="#ff6b35" stroke-width="1.5" fill="none" opacity="0.14">
+    <path d="M1920,850 L1600,850 L1550,800 L1550,650"/>
+    <path d="M1920,870 L1620,870 L1570,820 L1570,670"/>
+    <path d="M1920,890 L1640,890 L1590,840 L1590,690"/>
+    <path d="M1550,800 L1400,800 L1350,750"/>
+    <path d="M1570,820 L1420,820 L1370,770"/>
+    <path d="M1590,840 L1440,840 L1390,790"/>
+    <path d="M1550,650 L1550,550 L1500,500"/>
+    <path d="M1570,670 L1570,570 L1520,520"/>
+  </g>
+
+  <!-- Center traces -->
+  <g stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.1">
+    <path d="M800,0 L800,200 L850,250 L850,400 L900,450"/>
+    <path d="M820,0 L820,180 L870,230 L870,380 L920,430"/>
+    <path d="M1120,0 L1120,200 L1070,250 L1070,400 L1020,450"/>
+    <path d="M1100,0 L1100,180 L1050,230 L1050,380 L1000,430"/>
+    <path d="M800,1080 L800,880 L850,830 L850,680 L900,630"/>
+    <path d="M820,1080 L820,900 L870,850 L870,700 L920,650"/>
+    <path d="M1120,1080 L1120,880 L1070,830 L1070,680 L1020,630"/>
+    <path d="M1100,1080 L1100,900 L1050,850 L1050,700 L1000,650"/>
+  </g>
+
+  <!-- === GLOWING NODES === -->
+  <!-- Top-left nodes -->
+  <circle cx="250" cy="250" r="20" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="250" cy="250" r="4" fill="#00d4ff" opacity="0.8"/>
+  <circle cx="400" cy="250" r="15" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="400" cy="250" r="3" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="250" cy="400" r="12" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="250" cy="400" r="3" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="300" cy="550" r="18" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="300" cy="550" r="4" fill="#00d4ff" opacity="0.7"/>
+
+  <!-- Top-right nodes -->
+  <circle cx="1650" cy="200" r="22" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1650" cy="200" r="5" fill="#ff6b35" opacity="0.8"/>
+  <circle cx="1500" cy="200" r="16" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1500" cy="200" r="4" fill="#ff6b35" opacity="0.7"/>
+  <circle cx="1650" cy="350" r="14" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1650" cy="350" r="3" fill="#ff6b35" opacity="0.6"/>
+  <circle cx="1600" cy="500" r="19" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1600" cy="500" r="4" fill="#ff6b35" opacity="0.7"/>
+
+  <!-- Bottom-left nodes -->
+  <circle cx="350" cy="750" r="20" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="350" cy="750" r="4" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="500" cy="750" r="14" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="500" cy="750" r="3" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="350" cy="600" r="16" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="350" cy="600" r="4" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="400" cy="450" r="18" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="400" cy="450" r="4" fill="#00d4ff" opacity="0.6"/>
+
+  <!-- Bottom-right nodes -->
+  <circle cx="1550" cy="800" r="21" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1550" cy="800" r="5" fill="#ff6b35" opacity="0.8"/>
+  <circle cx="1400" cy="800" r="15" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1400" cy="800" r="4" fill="#ff6b35" opacity="0.7"/>
+  <circle cx="1550" cy="650" r="13" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1550" cy="650" r="3" fill="#ff6b35" opacity="0.6"/>
+  <circle cx="1500" cy="500" r="17" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1500" cy="500" r="4" fill="#ff6b35" opacity="0.7"/>
+
+  <!-- Center nodes -->
+  <circle cx="850" cy="250" r="14" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="850" cy="250" r="3" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="1070" cy="250" r="14" fill="url(#glow1)" filter="url(#blur-glow)"/>
+  <circle cx="1070" cy="250" r="3" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="850" cy="830" r="14" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="850" cy="830" r="3" fill="#ff6b35" opacity="0.5"/>
+  <circle cx="1070" cy="830" r="14" fill="url(#glow2)" filter="url(#blur-glow)"/>
+  <circle cx="1070" cy="830" r="3" fill="#ff6b35" opacity="0.5"/>
+
+  <!-- Scattered small nodes -->
+  <circle cx="600" cy="300" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="700" cy="500" r="2" fill="#ff6b35" opacity="0.3"/>
+  <circle cx="1200" cy="300" r="2" fill="#ff6b35" opacity="0.3"/>
+  <circle cx="1300" cy="500" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="600" cy="700" r="2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="700" cy="600" r="2" fill="#ff6b35" opacity="0.3"/>
+  <circle cx="1200" cy="700" r="2" fill="#ff6b35" opacity="0.3"/>
+  <circle cx="1300" cy="600" r="2" fill="#00d4ff" opacity="0.3"/>
+</svg>

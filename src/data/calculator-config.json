@@ -1,0 +1,19 @@
+{
+  "laser": {
+    "services": [
+      { "id": "cut", "name": "Лазерная резка", "pricePerMeter": 200 },
+      { "id": "engrave", "name": "Гравировка / маркировка", "pricePerCm2": 100 }
+    ],
+    "minOrder": 1500
+  },
+  "print3d": {
+    "materials": [
+      { "id": "pla", "name": "PLA", "pricePerGram": 15 },
+      { "id": "petg", "name": "PETG", "pricePerGram": 18 },
+      { "id": "abs", "name": "ABS", "pricePerGram": 20 },
+      { "id": "nylon", "name": "Нейлон", "pricePerGram": 35 },
+      { "id": "tpu", "name": "TPU (резина)", "pricePerGram": 30 }
+    ],
+    "defaultWeightGrams": 50
+  }
+}
