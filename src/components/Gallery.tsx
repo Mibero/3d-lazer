@@ -11,7 +11,11 @@ const filters: { key: FilterKey; label: string }[] = [
   { key: "print3d", label: "3D-печать" },
 ];
 
-export default function Gallery() {
+interface Props {
+  onOpenForm: () => void;
+}
+
+export default function Gallery({ onOpenForm }: Props) {
   const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
 
   const filtered =
@@ -114,12 +118,12 @@ export default function Gallery() {
 
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Хочу так же!</p>
-          <a
-            href="#contacts"
+          <button
+            onClick={onOpenForm}
             className="inline-flex px-6 py-3 rounded-lg bg-gradient-to-r from-[#00d4ff] to-[#ff6b35] text-white font-medium hover:opacity-90 transition-opacity"
           >
             Заказать работу
-          </a>
+          </button>
         </div>
       </div>
     </section>

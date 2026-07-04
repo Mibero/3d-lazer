@@ -37,7 +37,7 @@ export default function Home() {
         <HowWeWork />
         <Prices onOpenForm={() => setFormOpen(true)} />
         <AvitoReviews />
-        <Gallery />
+        <Gallery onOpenForm={() => setFormOpen(true)} />
         <div ref={calcRef}>
           <Calculator onOpenForm={() => setFormOpen(true)} />
         </div>
