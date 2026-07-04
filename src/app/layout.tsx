@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
 });
+
+// ============================================================
+// ВСТАВЬТЕ ВАШИ ID СЧЁТЧИКОВ СЮДА:
+// ============================================================
+const YANDEX_COUNTER_ID = "XXXXXXXX"; // <-- замените на ID из Яндекс.Метрики
+const GOOGLE_ANALYTICS_ID = "G-XXXXXXXXXX"; // <-- замените на ID из Google Analytics
+// ============================================================
 
 export const metadata: Metadata = {
   title: "3D Лазер Лаборатория — Лазерная резка, гравировка, 3D-печать в Москве",
@@ -63,7 +71,6 @@ export const metadata: Metadata = {
   verification: {},
 };
 
-// Structured data for search engines and AI
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -168,6 +175,48 @@ export default function RootLayout({
         <meta name="ICBM" content="55.976293, 37.148081" />
       </head>
       <body className="min-h-full flex flex-col text-white font-[family-name:var(--font-inter)]">
+        {/* === Яндекс.Метрика === */}
+        <Script id="yandex-metrika" strategy="afterInteractive">
+          {`
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            ym(${YANDEX_COUNTER_ID}, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+            });
+          `}
+        </Script>
+        <noscript>
+          <div>
+            <img
+              src={`https://mc.yandex.ru/watch/${YANDEX_COUNTER_ID}`}
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=""
+            />
+          </div>
+        </noscript>
+        {/* === End Яндекс.Метрика === */}
+
+        {/* === Google Analytics === */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ANALYTICS_ID}');
+          `}
+        </Script>
+        {/* === End Google Analytics === */}
+
         {children}
       </body>
     </html>
